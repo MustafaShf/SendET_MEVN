@@ -1,50 +1,61 @@
-# SendET - Email Sending App
+# SendET
 
-SendET is an email-sending application that utilizes **SendGrid by Twilio** for sending emails. The frontend is built using **Vue.js**, providing a simple and efficient interface for composing and tracking emails.
+SendET is an email-sending application using SendGrid by Twilio. It has a frontend built with Vue.js and a backend powered by Node.js and Express.
 
 ## Features
-- Send emails using **SendGrid API**
-- Track email history with **read/unread status**
-- Responsive and modern UI with **Tailwind CSS**
-- Built using **Vue 3 and Composition API**
+- Send emails using SendGrid
+- Track email opens with automatic status updates
+- Display email history with real-time status changes
 
-## Prerequisites
-Before running the project, ensure you have the following installed:
-- [Node.js](https://nodejs.org/) (v16 or later recommended)
-- [Vue CLI](https://cli.vuejs.org/) (optional, for development)
-- [SendGrid API Key](https://sendgrid.com/)
-- A backend service (e.g., **Express.js**) to handle email requests
+## Tech Stack
+- **Frontend:** Vue.js
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB
+- **Email Service:** SendGrid by Twilio
 
-## Installation
+## Setup Instructions
+
+### Prerequisites
+Ensure you have the following installed:
+- [Node.js](https://nodejs.org/)
+- [MongoDB](https://www.mongodb.com/)
+
+### Installation
+
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/yourusername/SendET.git
+   git clone https://github.com/your-username/SendET.git
    cd SendET
    ```
 
-2. **Install dependencies:**
+2. **Set up the backend:**
    ```sh
+   cd backend
    npm install
    ```
 
-3. **Set up environment variables:**
-   - Create a `.env` file in the backend and add your **SendGrid API Key**:
-     ```env
-     PORT
-MONGO_CONN
-SENDGRID_API
-URL
-PUBLIC_URL
-     S
-     ```
-
-4. **Run the backend server:**
-   Ensure your backend is running on **localhost:3000** or update the API URL in the frontend if needed.
-   ```sh
-   node server.js
+3. **Create a `.env` file** inside the `backend` directory with the following variables:
+   ```env
+   PORT=3000
+   MONGO_CONN=mongodb://localhost/EmailSend
+   SENDGRID_API=your-sendgrid-api-key
+   URL=
+   PUBLIC_URL=https://your-ngrok-url.ngrok-free.app
    ```
 
-5. **Start the frontend:**
+4. **Start the backend server:**
+   ```sh
+   npm start
+   ```
+
+5. **Set up the frontend:**
+   ```sh
+   cd ../frontend
+   npm install
+   ```
+
+6. **Run the frontend:**
    ```sh
    npm run dev
-  
+   ```
+
